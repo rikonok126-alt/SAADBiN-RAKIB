@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, Cambria, serif;
+  --font-arabic: "Amiri", Georgia, serif;
+  
+  --color-primary: #2D4F3E;
+  --color-primary-light: #416B57;
+  --color-primary-dark: #1E3529;
+  --color-accent: #C5A059;
+  --color-accent-light: #F7F4EB;
+  --color-bg-minimal: #FDFDFB;
+  --color-surface-minimal: #FFFFFF;
+  --color-border-minimal: #EAE9E4;
+  --color-text-main: #1A1A1A;
+  --color-text-muted: #696E75;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-minimal);
+    color: var(--color-text-main);
+  }
+}
+
+/* Custom scrollbars for a highly polished feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-minimal);
+}
+::-webkit-scrollbar-thumb {
+  background: #E5E7EB;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Glassmorphism utility adaptation with forest tones */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-minimal);
+}
+
+.dark-glass-panel {
+  background: rgba(45, 79, 62, 0.96);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 160, 89, 0.25);
+}
+
+/* Pulsing rings for current prayer indicator */
+@keyframes status-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+.pulse-indicator {
+  animation: status-pulse 2s infinite ease-in-out;
+}

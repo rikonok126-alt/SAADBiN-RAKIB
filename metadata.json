@@ -1,0 +1,6 @@
+{
+  "name": "Nour Al-Salah",
+  "description": "An elegant, minimal companion for learning Namaz (Salah), reading small Surahs, browsing authentic Hadiths, and accessing live local prayer times with an AI Islamic Assistant.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
